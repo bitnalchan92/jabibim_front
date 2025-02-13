@@ -2,21 +2,19 @@
 
 import Video from "@/features/course/components/video";
 import ClassList from "@/features/course/components/classList";
-import { useSearchParams } from "next/navigation";
 import { Suspense, useEffect, useState } from "react";
 
 export default function CourseLecturePage() {
-  const searchParams = useSearchParams();
   const [courseId, setCourseId] = useState("");
   const [classId, setClassId] = useState("");
   const [videoPath, setVideoPath] = useState("");
 
   useEffect(() => {
-    const id = searchParams.get("courseId");
+    const id = "temp"; // TODO 쿼리스트링에서 courseId 가져올 수 있도록 수정하기!
     if (id) {
       setCourseId(id || "");
     }
-  }, [searchParams]);
+  }, []);
 
   const setDisplayVideoPath = (classId: string) => {
     setClassId(classId);
