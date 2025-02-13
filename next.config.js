@@ -26,8 +26,8 @@ const nextConfig = {
           { key: "Access-Control-Allow-Credentials", value: "true" },
           {
             key: "Access-Control-Allow-Origin",
-            value: "http://localhost:3000/",
-          }, // 실제 운영 환경에서는 특정 도메인으로 제한 https://bibimfront.vercel.app/
+            value: process.env.NEXT_PUBLIC_CLIENT_BASE_URL,
+          }, // 실제 운영 환경에서는 특정 도메인으로 제한 https://jabibim-front.vercel.app/
           {
             key: "Access-Control-Allow-Methods",
             value: "GET,DELETE,PATCH,POST,PUT",
