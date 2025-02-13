@@ -1,3 +1,5 @@
+"use client";
+
 import { useAuthStore } from "@/features/auth/store/auth.store";
 import { courseClient } from "../api/course.client";
 import { useState, useEffect, useRef } from "react";

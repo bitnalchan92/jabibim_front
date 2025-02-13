@@ -1,3 +1,5 @@
+"use client";
+
 import { ClassDetailData } from "./classList";
 
 type ClassDetailProps = {
